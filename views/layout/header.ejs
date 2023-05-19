@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+     <link rel="icon" type="image/png" href="../images/logo.png">
+    <%- include('./css')%>
+        <link rel="stylesheet" href="/stylesheets/header.css">
+
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light shadow p-0">
+        <a href="/home" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"> <img
+                    src="https://scontent.fhan17-1.fna.fbcdn.net/v/t1.15752-9/336300477_2243128412546585_3580624008134218675_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=W9M_C3CmSkgAX-mSiwD&_nc_ht=scontent.fhan17-1.fna&oh=03_AdR9jQY-V8C48zmrGqlG84ZV7Sz665t8KNO7eLXV5p1z2A&oe=643F5D5B"
+                    alt="" style="width: 200px;"></h2>
+        </a>
+
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="/home" class="nav-item nav-link active">Home</a>
+                <a href="/product/product" class="nav-item nav-link">Product</a>
+                <a href="/product/category" class="nav-item nav-link">Category</a>
+                <a href="/product/addproduct" class="nav-item nav-link">Add Product</a>
+                <a href="/users/user" class="nav-item nav-link">Users</a>
+            </div>
+
+            <div class="flex-shrink-0 dropdown p-4 p-lg-0" style="margin-right: 20px; align-items: center;">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle " data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="../images/logo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small shadow"
+                    style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 34px);"
+                    data-popper-placement="bottom-end">
+                    <li><a class="dropdown-item" href="/users/profile">Profile</a></li>
+                    <li><a class="dropdown-item" href="/users/register">Sign Up</a></li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Sign
+                            out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- dialog loug out -->
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="bi bi-x"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">Bạn muốn đăng xuất khỏi tài khoản.</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/users/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!---------------------------------------------->

@@ -1,0 +1,104 @@
+<%- include('../layout/header') %>
+
+    <style>
+        .upload {
+            width: 100px;
+            position: relative;
+            margin: auto;
+            margin-right: 100px;
+        }
+
+        .upload img {
+            border-radius: 50%;
+            border: 6px solid #eaeaea;
+        }
+
+        .upload .round {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #00B4FF;
+            width: 32px;
+            height: 32px;
+            line-height: 33px;
+            text-align: center;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .upload .round input[type="file"] {
+            position: absolute;
+            transform: scale(2);
+            opacity: 0;
+        }
+
+        input[type=file]::-webkit-file-upload-button {
+            cursor: pointer;
+        }
+    </style>
+    <div class="container" style="min-height: 700px;">
+        <div class="container rounded bg-white mb-5" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                        <div class="upload">
+                            <img src="/<%= objEdit.image  %>" width=150 height=200 alt="">
+                            <div class="round">
+                                <input type="file" name="image">
+                                <i class="fa fa-camera" style="color: #fff;"></i>
+                            </div>
+                        </div>
+
+                        <span class="font-weight-bold">
+                            <%= objEdit.fullname %>
+                        </span><span class="text-black-50">
+                            <%= objEdit.email %>
+                        </span><span> </span>
+                    </div>
+                </div>
+                <div class="col-md-6 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Profile Settings</h4>
+                        </div>
+                        <form action="" method="post">
+                            <div class="row mt-3 ">
+                                <div class="col-md-12 mb-4"><label class="labels">Username</label>
+                                    <input type="text" class="form-control" placeholder="Username"
+                                        value="<%= objEdit.username  %>" name="username" required>
+                                </div>
+                                <div class="col-md-12 mb-4"><label class="labels">Name</label><input type="text"
+                                        class="form-control" placeholder="Name" name="fullname" value="<%= objEdit.fullname  %>"
+                                        required></div>
+                                <div class="col-md-12 mb-4"><label class="labels">Email</label><input type="text"
+                                        class="form-control" placeholder="Email"  name="email" value="<%= objEdit.email %>" required>
+                                </div>
+                                <!-- <div class="col-md-12 mb-4"><label class="labels">Phone</label><input type="text"
+                                    class="form-control" placeholder="Phone" value="" required></div> -->
+                                <div class="col-md-12 mb-4"><label class="labels">Password</label><input type="password"
+                                        class="form-control" placeholder="Password" name="passwd" value="<%= objEdit.password%>"
+                                        required></div>
+
+                                <fieldset disabled>
+                                    <div class="col-md-12 mb-4"><label class="labels">Manage</label><input type="text"
+                                            class="form-control" placeholder="Manage"  name="manage" value="<%= objEdit.manage %>">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="mt-5 text-center"><button class="btn btn-outline-success profile-button"
+                                    type="submit">Save
+                                    Profile</button></div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <%- include('../layout/footer') %>
+        <!----------------------------------------------------------------------------------------- -->
